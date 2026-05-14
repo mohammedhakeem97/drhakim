@@ -1151,6 +1151,7 @@ html[dir="ltr"] .heartbeat-line { inset: auto 8% 8% auto; }
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.65s ease, transform 0.65s ease;
+  will-change: transform, opacity;
 }
 .reveal-scale { transform: translateY(22px) scale(0.96); }
 .reveal-up { transform: translateY(34px); }
