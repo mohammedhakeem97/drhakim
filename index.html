@@ -14,7 +14,8 @@
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
     {
@@ -198,7 +199,7 @@
         <p class="micro-label" data-ar="شركاء النجاح" data-en="Success Partners">شركاء النجاح</p>
         <h2 data-ar="أسماء طبية اختارت أن تظهر بشكل أفضل." data-en="Medical names that chose to show up better.">أسماء طبية اختارت أن تظهر بشكل أفضل.</h2>
       </div>
-      <div class="logo-run logo-run-one" aria-label="Partner logos">
+      <div class="logo-run logo-run-one" aria-label="Partner logos" dir="ltr">
         <div>
           <img src="assets/images/p1.png" alt="YOU CLINIC"><img src="assets/images/p2.png" alt="Dr. Nassar"><img src="assets/images/p3.png" alt="Al Azizi Hospital"><img src="assets/images/p4.png" alt="Amr Nofal"><img src="assets/images/p5.png" alt="Florida Dental"><img src="assets/images/p6.png" alt="Dr. Enoy El-Sherif"><img src="assets/images/p7.png" alt="SCAR Clinic"><img src="assets/images/p8.png" alt="DoctorFly"><img src="assets/images/p9.png" alt="Alpha">
           <img src="assets/images/p1.png" alt=""><img src="assets/images/p2.png" alt=""><img src="assets/images/p3.png" alt=""><img src="assets/images/p4.png" alt=""><img src="assets/images/p5.png" alt=""><img src="assets/images/p6.png" alt=""><img src="assets/images/p7.png" alt=""><img src="assets/images/p8.png" alt=""><img src="assets/images/p9.png" alt="">
@@ -233,12 +234,12 @@
       <div class="container">
         <div class="section-intro centered reveal">
           <p class="micro-label" data-ar="المدونة" data-en="Blog">المدونة</p>
-          <h2 data-ar="بين العلوم المجردة, والعمل الميداني" data-en="Reserved space for deeper articles coming soon.">مساحات محجوزة لمقالات عميقة قريباً.</h2>
+          <h2 data-ar="بين العلوم المجردة, والعمل الميداني" data-en="Between abstract science and field work">بين العلوم المجردة، والعمل الميداني.</h2>
         </div>
         <div class="article-grid">
-          <article class="article-card reveal"><span>01 • Branding</span><h3>لماذا لم تعد المهارة الطبية وحدها كافية؟</h3><p>Placeholder للمقال حتى تتم إضافة المحتوى العربي الكامل.</p><a href="blog/article-1.html">فتح المقال</a></article>
-          <article class="article-card reveal"><span>02 • Trust</span><h3>Personal Branding للأطباء</h3><p>المكان جاهز للكتابة، التصميم والرابط والبنية مكتملون.</p><a href="blog/article-2.html">فتح المقال</a></article>
-          <article class="article-card reveal"><span>03 • Ethics</span><h3>التسويق الطبي الأخلاقي</h3><p>Placeholder أنيق للمقال حتى تبدأ مرحلة تحرير المدونة.</p><a href="blog/article-3.html">فتح المقال</a></article>
+          <article class="article-card reveal"><span>01 • Branding</span><h3>لماذا لم تعد المهارة الطبية وحدها كافية؟</h3><p>تعرف على الأسباب التي تجعل الخبرة الطبية وحدها غير كافية لنجاح العيادة في العصر الرقمي.</p><a href="blog/article-1.html">فتح المقال</a></article>
+          <article class="article-card reveal"><span>02 • Trust</span><h3>Personal Branding للأطباء</h3><p>دليل شامل لبناء علامة شخصية قوية تجذب المرضى المناسبين وتبني الثقة قبل الزيارة الأولى.</p><a href="blog/article-2.html">فتح المقال</a></article>
+          <article class="article-card reveal"><span>03 • Ethics</span><h3>التسويق الطبي الأخلاقي</h3><p>كيف يوازن الطبيب الناجح بين زيادة عدد المرضى والحفاظ على ثقتهم وصورته المهنية.</p><a href="blog/article-3.html">فتح المقال</a></article>
         </div>
         <div class="center-action reveal">
           <a class="btn btn-secondary" href="blog.html" data-ar="عرض كل المقالات" data-en="View All Articles">عرض كل المقالات</a>
@@ -268,6 +269,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
