@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الاستشارة | د. محمد حكيم</title>
+  <meta name="description" content="احجز استشارتك الآن مع د. محمد حكيم، استشاري التسويق الطبي. تحليل شامل لعيادتك، إدارة الفريق، وتحسين الحضور الرقمي.">
+  <meta property="og:title" content="الاستشارة | د. محمد حكيم">
+  <meta property="og:description" content="استشارة تسويق طبي متكاملة تشمل دراسة لعيادتك وملفات توجيهية لإدارة فريقك وحضورك الرقمي.">
+  <meta property="og:image" content="assets/images/me.jpg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .consultation-section {
+      background: var(--paper);
+    }
+    .consultation-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .consultation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .package-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(7, 17, 31, 0.08);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .package-card.premium {
+      background: var(--midnight);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .package-card.premium p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .package-card.premium li {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .package-price {
+      font-size: 2.5rem;
+      font-family: "Outfit", sans-serif;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .package-price span {
+      font-size: 1.2rem;
+      font-family: "Cairo", sans-serif;
+      color: var(--muted);
+      margin-inline-start: 8px;
+    }
+    .package-card.premium .package-price span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .package-features {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+      flex-grow: 1;
+    }
+    .package-features li {
+      position: relative;
+      padding-inline-start: 30px;
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .package-features li::before {
+      content: "✓";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0;
+      color: var(--teal);
+      font-weight: 800;
+    }
+    .pdf-items {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .pdf-item {
+      background: #fbf8f1;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(7, 17, 31, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pdf-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+    .pdf-item h4 {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+      color: var(--deep);
+    }
+    .pdf-item p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .pdf-icon {
+      color: var(--coral);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .disclaimer-box {
+      background: rgba(0, 191, 166, 0.1);
+      border-inline-start: 4px solid var(--teal);
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .disclaimer-box p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--deep);
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" data-scroll-progress></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">MH</span>
+      <span class="brand-copy"><strong>د. محمد حكيم</strong><small>استشاري التسويق الطبي</small></span>
+    </a>
+    <nav class="nav-links" data-nav>
+      <a href="index.html#about">الفكرة</a>
+      <a href="index.html#method">المنهج</a>
+      <a href="index.html#services">الخدمات</a>
+      <a href="index.html#partners">الشركاء</a>
+      <a href="blog.html">المدونة</a>
+      <a href="consultation.html" class="is-active">الاستشارة</a>
+      <a href="index.html#contact">تواصل</a>
+    </nav>
+    <div class="header-actions">
+      <a class="lang-toggle" href="index.html">الرئيسية</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="sub-hero">
+      <div class="container">
+        <p class="micro-label">التخطيط والتوجيه</p>
+        <h1>الاستشارة الطبية التسويقية</h1>
+        <p>اكتشف المشاكل، احصل على الحلول، وابنِ خارطة طريق واضحة لنمو عيادتك وزيادة الحجوزات بثقة.</p>
+      </div>
+    </section>
+
+    <section class="section consultation-section">
+      <div class="container">
+        <div class="section-intro centered reveal">
+          <p class="micro-label">خيارات الاستشارة</p>
+          <h2>اختر الباقة المناسبة لعيادتك</h2>
+        </div>
+
+        <div class="consultation-grid reveal">
+          <!-- الباقة الأساسية -->
+          <div class="package-card">
+            <h3>الاستشارة الأونلاين</h3>
+            <p>مكالمة تليفون، أو فيديو كول عن طريق Google Meet لمدة أقصاها ساعتين.</p>
+            <div class="package-price">3000<span>جنيه مصري</span></div>
+            <ul class="package-features">
+              <li>جلسة استشارية (أقصاها ساعتين) لمناقشة وضع العيادة.</li>
+              <li>ملحقات الـ PDF (5 ملفات توجيهية وعملية).</li>
+              <li>متابعة مجانية لمدة 3 شهور (مكالمة كل شهر مدة أقصاها ساعة).</li>
+            </ul>
+            <a href="https://wa.me/201019396638" class="btn btn-primary" target="_blank" rel="noopener">احجز الاستشارة</a>
+          </div>
+
+          <!-- باقة زيارة العيادة -->
+          <div class="package-card premium">
+            <h3>زيارة العيادة وتدريب الفريق</h3>
+            <p>توجيه ميداني لعيادتك وتدريب عملي لفريقك على أرض الواقع.</p>
+            <div class="package-price">8000<span>جنيه مصري</span></div>
+            <ul class="package-features">
+              <li>زيارة ميدانية للعيادة وتقييم الوضع الفعلي.</li>
+              <li>تدريب عملي لفريق العيادة على التعامل والإدارة.</li>
+              <li>ملحقات الـ PDF (5 ملفات توجيهية وعملية).</li>
+              <li>متابعتهم بميتنج أونلاين كل أسبوعين لمدة 3 شهور.</li>
+            </ul>
+            <a href="https://wa.me/201019396638" class="btn btn-primary" target="_blank" rel="noopener">احجز زيارة العيادة</a>
+          </div>
+        </div>
+
+        <div class="disclaimer-box reveal">
+          <p><strong>ملاحظة:</strong> جميع باقات الاستشارة تتضمن 5 ملفات PDF ترسل لك كملحقات عملية لتطبيق ما تم مناقشته وإدارة عيادتك باحترافية.</p>
+        </div>
+
+        <div class="section-intro reveal" style="margin-top: 80px;">
+          <p class="micro-label">الملحقات</p>
+          <h2>على ماذا ستحصل في الاستشارة؟</h2>
+          <p style="color: var(--muted); font-size: 1.1rem;">دي كلها ملحقات ترسل لك مع الاستشارة لتكون دليلك العملي.</p>
+        </div>
+
+        <div class="pdf-items reveal">
+          <div class="pdf-item">
+            <span class="pdf-icon">📄</span>
+            <h4 dir="ltr" style="text-align: left;">1. General Customized Study PDF</h4>
+            <p>يحتوي على تحليل شامل لعيادتك من خلال المناقشة ومعرفة المشاكل والحلول المقترحة مع خارطة الطريق لحلها.</p>
+          </div>
+          <div class="pdf-item">
+            <span class="pdf-icon">📄</span>
+            <h4 dir="ltr" style="text-align: left;">2. Manage Clinic Staff PDF</h4>
+            <p>فيه إزاي تعين وتدير فريق العيادة، وإزاي تحط KPIs ليهم عشان تضمن أفضل أداء ومعاملة للمرضى.</p>
+          </div>
+          <div class="pdf-item">
+            <span class="pdf-icon">📄</span>
+            <h4 dir="ltr" style="text-align: left;">3. Manage Social Media Team PDF</h4>
+            <p>إزاي تعين فريق السوشيال ميديا، وتحط KPIs، وإزاي تتابع شغلهم وتقيمه باستمرار.</p>
+          </div>
+          <div class="pdf-item">
+            <span class="pdf-icon">📄</span>
+            <h4 dir="ltr" style="text-align: left;">4. Manage Google Business Profile</h4>
+            <p>إزاي تعمل Setup ليه، وإزاي تتابعه وتطوره، وتتابع الريفيوز عليه عشان تظهر للباحثين عن تخصصك.</p>
+          </div>
+          <div class="pdf-item">
+            <span class="pdf-icon">📄</span>
+            <h4 dir="ltr" style="text-align: left;">5. Manage Your Ads PDF</h4>
+            <p>إزاي تعين مسوق للحملات الإعلانية، وإزاي تحكم على شغله وتتابعه عشان تتأكد من تحقيق العائد المطلوب.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-layout">
+      <div class="footer-call reveal">
+        <p class="micro-label">تواصل معي</p>
+        <h2>هل تحتاج استشارة تسويق طبي؟</h2>
+      </div>
+      <div class="contact-stack reveal">
+        <a href="https://wa.me/201019396638" target="_blank" rel="noopener">WhatsApp: +20 101 939 6638</a>
+        <a href="mailto:m7md7akeem97@gmail.com">m7md7akeem97@gmail.com</a>
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/201019396638" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-primary" href="mailto:m7md7akeem97@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Dr. Mohamed Hakim</span><span>صُنع بعناية للتميز الطبي</span></div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
