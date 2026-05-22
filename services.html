@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الخدمات والأسعار | د. محمد حكيم</title>
+  <meta name="description" content="تعرف على باقات التسويق الطبي للعيادات: باقة التأسيس، إدارة السوشيال ميديا، والاستشارات.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Styling for the packages */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+    .package-card {
+      background: rgba(11, 22, 40, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .package-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(0, 191, 166, 0.1), transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .package-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 191, 166, 0.4);
+      box-shadow: 0 30px 60px rgba(0, 191, 166, 0.15);
+    }
+    .package-card:hover::before {
+      opacity: 1;
+    }
+    .package-card.featured {
+      background: linear-gradient(160deg, #0b1628 0%, #07111f 100%);
+      border-color: rgba(200, 164, 77, 0.3);
+    }
+    .package-card.featured::before {
+      background: radial-gradient(circle at top left, rgba(200, 164, 77, 0.15), transparent 60%);
+      opacity: 1;
+    }
+    .package-card.featured:hover {
+      border-color: rgba(200, 164, 77, 0.6);
+      box-shadow: 0 30px 60px rgba(200, 164, 77, 0.15);
+    }
+    .package-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .package-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .package-price {
+      font-size: 3.2rem;
+      font-family: "Outfit", sans-serif;
+      font-weight: 800;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      line-height: 1;
+    }
+    .package-card.featured .package-price {
+      color: var(--gold);
+    }
+    .package-price small {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      font-family: "Cairo", sans-serif;
+    }
+    .package-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 3rem 0;
+      flex-grow: 1;
+      position: relative;
+      z-index: 1;
+    }
+    .package-features li {
+      position: relative;
+      padding-right: 2.2rem;
+      margin-bottom: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+    .package-features li::before {
+      content: '✓';
+      position: absolute;
+      right: 0;
+      top: 2px;
+      color: var(--teal);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .package-card.featured .package-features li::before {
+      color: var(--gold);
+    }
+    .services-page-main {
+      background: var(--ink);
+      color: var(--white);
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="services-page-main">
+  <div class="scroll-progress" data-scroll-progress></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">MH</span>
+      <span class="brand-copy"><strong>د. محمد حكيم</strong><small>استشاري التسويق الطبي</small></span>
+    </a>
+    <nav class="nav-links" data-nav>
+      <a href="index.html#about">الفكرة</a>
+      <a href="services.html" class="is-active">الخدمات</a>
+      <a href="portfolio.html">معرض الأعمال</a>
+      <a href="blog.html">المدونة</a>
+      <a href="consultation.html">الاستشارة</a>
+      <a href="index.html#contact">تواصل</a>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="sub-hero" style="background: transparent;">
+      <div class="container">
+        <p class="micro-label" style="color: var(--teal);">الخدمات والأسعار</p>
+        <h1 style="color: var(--white);">أنظمة نمو وتسويق طبية متكاملة</h1>
+        <p style="color: rgba(255,255,255,0.7);">اختر الباقة التي تناسب مرحلة عيادتك الحالية. كل خدماتنا مصممة خصيصاً للقطاع الطبي.</p>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="section-intro centered reveal">
+          <h2 style="color: var(--white);">الباقات الشاملة للعيادات</h2>
+        </div>
+        
+        <div class="packages-grid">
+          
+          <!-- Social Media Management Package -->
+          <article class="package-card reveal">
+            <div class="package-header">
+              <span class="eyebrow" style="color: var(--teal); margin-bottom: 0.8rem; display: block; font-weight: 700; font-size: 1rem;">الاستمرارية والنمو</span>
+              <h3 class="package-title">إدارة السوشيال ميديا</h3>
+              <div class="package-price">15,000 <small>ج.م / شهرياً</small></div>
+            </div>
+            <ul class="package-features">
+              <li>كتابة وإدارة المحتوى الطبي بطريقة احترافية ومبسطة للمرضى.</li>
+              <li>تصميمات جرافيك (Designs) راقية تعكس هوية العيادة.</li>
+              <li>مونتاج الفيديوهات (Video Editing) بشكل جذاب وعصري.</li>
+              <li>إدارة الحملات الإعلانية الممولة (Media Buying) باحترافية.</li>
+              <li>تحليل الأداء المستمر وتقديم تقارير دورية واضحة.</li>
+            </ul>
+            <div class="center-action" style="margin-top: auto; position: relative; z-index: 1;">
+              <a href="https://wa.me/201019396638?text=أريد الاستفسار عن باقة إدارة السوشيال ميديا (15,000 جنيه شهرياً)" class="btn btn-secondary" style="width: 100%; border-color: rgba(255,255,255,0.2);">اطلب باقة الإدارة</a>
+            </div>
+          </article>
+
+          <!-- Founding Package -->
+          <article class="package-card featured reveal" style="animation-delay: 0.1s;">
+            <div style="position: absolute; top: 0; right: 2rem; background: var(--gold); color: #000; padding: 0.4rem 1.5rem; border-radius: 0 0 12px 12px; font-weight: 800; font-size: 0.9rem; z-index: 2;">الأكثر طلباً</div>
+            <div class="package-header">
+              <span class="eyebrow" style="color: var(--gold); margin-bottom: 0.8rem; display: block; font-weight: 700; font-size: 1rem;">الأساس القوي</span>
+              <h3 class="package-title">باقة التأسيس للعيادات</h3>
+              <div class="package-price">25,000 <small>ج.م (مرة واحدة)</small></div>
+            </div>
+            <ul class="package-features">
+              <li>تصميم وتطوير الموقع الإلكتروني للعيادة بشكل احترافي وسريع.</li>
+              <li>إنشاء وتهيئة ملف جوجل للأعمال (Local SEO) لتتصدر نتائج البحث.</li>
+              <li>تأسيس وضبط احترافي لجميع منصات السوشيال ميديا الخاصة بك.</li>
+              <li>إعداد استراتيجية سوشيال ميديا متكاملة ومدروسة لمدة 3 شهور.</li>
+              <li>اجتماع تقييم شهري (Online Meeting) لمتابعة الوضع وتوجيه الفريق.</li>
+            </ul>
+            <div class="center-action" style="margin-top: auto; position: relative; z-index: 1;">
+              <a href="https://wa.me/201019396638?text=أريد الاستفسار عن باقة التأسيس (25,000 جنيه)" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--gold), #e5c86f); color: #000;">احجز باقة التأسيس</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Individual Services Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro centered reveal">
+          <h2 style="color: var(--white);">خدمات واستشارات فردية</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+          
+          <article class="reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2.5rem; transition: transform 0.3s ease;">
+            <span style="display: inline-block; background: rgba(0, 191, 166, 0.1); color: var(--teal); padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; margin-bottom: 1.5rem;">VIP</span>
+            <h3 style="font-size: 1.6rem; color: var(--white); margin-bottom: 1rem;">الاشتراك في المدونة الخاصة</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">مقال حصري أسبوعياً (52 مقال في السنة) يحتوي على أسرار واستراتيجيات متقدمة لتسويق العيادات لا تُنشر للعامة.</p>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+              <strong style="font-size: 1.4rem; color: var(--teal);">1,000 ج.م <small style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">/ سنوياً</small></strong>
+              <a href="blog.html" style="color: var(--white); border-bottom: 1px solid var(--teal); padding-bottom: 2px;">تفاصيل المدونة</a>
+            </div>
+          </article>
+
+          <article class="reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2.5rem; transition: transform 0.3s ease;">
+            <span style="display: inline-block; background: rgba(200, 164, 77, 0.1); color: var(--gold); padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; margin-bottom: 1.5rem;">CONSULTATION</span>
+            <h3 style="font-size: 1.6rem; color: var(--white); margin-bottom: 1rem;">استشارة التسويق الطبي</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">جلسة تقييم شاملة لوضع العيادة الحالي، أو تدريب مكثف لفريق التسويق والمبيعات الخاص بك لوضع خطة عمل واضحة.</p>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+              <strong style="font-size: 1.4rem; color: var(--gold);">تبدأ من 3,000 ج.م</strong>
+              <a href="consultation.html" style="color: var(--white); border-bottom: 1px solid var(--gold); padding-bottom: 2px;">تفاصيل الاستشارة</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact" style="background: rgba(7, 17, 31, 0.8);">
+    <div class="container footer-layout">
+      <div class="footer-call reveal">
+        <p class="micro-label">تواصل معي</p>
+        <h2>هل أنت مستعد لتطوير عيادتك؟</h2>
+      </div>
+      <div class="contact-stack reveal">
+        <a href="https://wa.me/201019396638" target="_blank" rel="noopener">WhatsApp: +20 101 939 6638</a>
+        <a href="mailto:m7md7akeem97@gmail.com">m7md7akeem97@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Dr. Mohamed Hakim</span><span>صُنع بعناية للتميز الطبي</span></div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -10,7 +10,8 @@ const types = {
   ".svg": "image/svg+xml",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
-  ".png": "image/png"
+  ".png": "image/png",
+  ".mp4": "video/mp4"
 };
 
 http.createServer((req, res) => {
